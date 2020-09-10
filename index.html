@@ -1,599 +1,442 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Welcome</title>
 
-	<!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Snac theme tempalte">
-    <meta name="author" content="NDT">
-    <meta name="keywords" content="Snac theme template">
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <title>CKsite</title>
 
-	<!--Let browser know website is optimized for mobile-->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="icon" type="image/png" href="image/unicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>    
-    <script src="https://use.fontawesome.com/a3fe061deb.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
-    <style>
-    	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-	    .w3-row-padding img {margin-bottom: 12px}
-	    .bgimg 
-	    {
-	        /*background-position: relative;*/
-	        /*background-repeat:repeat;*/
-	        /*background-size: cover;*/
-	        background-image: url('./image/picture.png');
-	        min-height: 100%;
-	    }
-	    .box
-	    {
-	      background-color: rgba(204,255,255,0.7);
-	      background-position: center;
-	      border-radius: 10%;
-	    }
-	    .img-circle 
-	    {
-	    	border-radius: 50%;
-	    	height: 50px;
-	    	width: 50px;
-	    }
-	    .img-circle1
-	    {
-	    	border-radius: 50%;
-	    	height: 300px;
-	    	width: 300px;
-	    	padding-bottom: 30px;
-	    	padding-top: 30px
-	    }
-	    .img-card
-	    {
-	    	height: 250px;
-	    	width: 250px;
-	    	padding-left: 40px;
-	    	padding-right: 30px; 
-	    	padding-bottom: 30px;
-	    	padding-top: 30px;
-	    }
-	    .pad
-	    {
-	    	padding-top: 10px;
-	    	padding-bottom: 10px;
-	    }
-	    .padfooter
-	    {
-	    	padding-top: 5px;
-	    	padding-bottom: 10px;
-	    }
-	    .img-pad
-	    {
-	    	margin-top: 10px;
-	    }
-	    .navextend
-	    {
-	    	height: 80px;
-	    	position: fixed;
-	    	background-image: url('./image/h1.png');
-	    }
-	    .aboutme
-	    {
-	    	background-color: rgba(0,0,0,0.7);
-	    	border-radius: 20px;
-	    	color: grey;
-	    }
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_1.png">
 
-	    .parallax 
-	    {
-		    /* The image used */
-		    background-image: url('./image/picture.png');
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
-		    /* Full height */
-		    height: 100%; 
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
 
-		    /* Create the parallax scrolling effect */
-		    background-attachment: fixed;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
-		}
-
-    </style>
-
-
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
+<body>
 
-<body class="parallax">
-	<!-- Header start-->
-    <header >
-    	<nav class="grey darken-1 navextend">
-          <div class="container ">
-                <div class="row">
-                  <div class="col l12 s12">
-                    <div class="nav-wrapper ">
-                      <a href="index.html"><img class="img-circle img-pad" src="./image/homeIcon.png"></a>
-                      <a href="index.html" class=" center-align blue-text text-lighten-4 btn btn-floating btn-large  black pulse tooltipped " data-tooltip="Home"><i class="material-icons">home</i></a>
-                      <ul id="nav-mobile" class="right pad">
-                      	<li>
-                        	<a href="#TechBlog" class="black-text text-lighten-4 btn btn-floating btn-large  black pulse tooltipped" data-tooltip="TechBlog" >
-                        		<i class="fa fa-rss-square"></i>
-                        	</a>
-												</li>
-												
-												<li>
-                        	<a href="#NormalBlog" class="black-text text-lighten-4 btn btn-floating btn-large  black pulse tooltipped" data-tooltip="NormalBlog" >
-                        		<i class="fa fa-th-large"></i>
-                        	</a>
-                        </li>
-
-                        <li>
-                        	<a href="#Project" class="blue-text text-lighten-4 btn btn-floating btn-large black pulse tooltipped" data-tooltip="Projects">
-                        		<i class="fa fa-book"></i>
-                        	</a>
-                        </li>
-
-                        <li>
-                        	<a href="#Contact" class="blue-text text-lighten-4 btn btn-floating btn-large  black pulse tooltipped" data-tooltip="Contacts">
-                        		<i class="material-icons">contacts</i>
-                        	</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-        </nav>	
-    </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!-- Header end-->
-	<div class="container grey lighten-1" style="border-radius: 20px;" id="Intro">
-    	<div class="row">
-    		<div class="col s3 push-s4">
-               <samp>
-               		<img src="./image/picture.jpg" class="img-circle1 ">
-               </samp> 
-                 
-            </div>
-        </div>
-        <div class="container ">
-            <div class="col s9 push-s2" style="color: black;">
-            	<center>
-            		<b><h3>About Me</h3></b>
-            	</center>
-            	<h5>
-            		<p>
-	            		I am Kshitij Chaurasiya an IT guy working in Veritas-Technologies, Pune.<br><br>
-				Working on different Virtualization workloads like VMware and KVM etc, also some ssl-certificates security stuffs.
-	            		I like to Explore different types of Domain like Natural languge Processing , Data Structure and Algorithms , Machine Learning , Bio-Informatics  and also different types of Operating system like  Ubuntu , Fedora , OSX , Linux-Arm.
-            		</p>
-            	</h5>
-            </div>
-            <div class="card-action" style = "padding-bottom: 20px; padding-left: 50px;" >
-            	<center>
-                  	<a  href="./resume/resume.pdf" target="_blank" class=" z-depth-5 waves-effect waves-light btn center-align"><i class="fa fa-book"></i>Resume</a>
-                </center>
-            </div>
-    	</div>
-    </div>
-    <br>
-    <br>
-    <br>
-
-    
-
-     <!-- About start-->
-    <section  id="TechBlog"  >
-        <div class="container grey lighten-3" style="border-radius: 20px;">
-            <div class="row">
-            	<div>
-            		<br><br><br>
-            		<center>
-            			<h3><b>TECHNICAL BLOGS</b></h3>
-            		</center>
-            	</div>
-
-
-			    <div class="col s4 push-s1 ">
-			      <div class="card small z-depth-5">
-			        <div class="img-card">
-			          <img class="img-card" src="image/git.jpg">
-			        </div>
-			        <div class="card-content">
-			        </div>
-			        <div class="card-action ">
-			          <center>
-			          		<a href="https://ckshitij.github.io/Git-GitHub-Tutorial/" target="_blank">Read About Git and Github</a>
-			          </center>
-			        </div>
-			      </div>
-			    </div>
-
-			    <div class="col s4 push-s3">
-			      <div class="card small z-depth-5">
-			        <div >
-			         	<center>
-			         		<img class="img-card" src="image/lexyacc.jpg">
-			         	</center> 
-			        </div>
-			        <div class="card-content">
-			        </div>
-			        <div class="card-action">
-			          <center>
-			          		<a href="https://ckshitij.github.io/LEX-AND-YACC/" target="_blank">Read About lex and yacc</a>
-			          </center>
-			        </div>
-			      </div>
-			    </div>
-
-				<div class="col s12">
-					
-				</div>
-
-		      <div class="col s4 push-s1">
-			      <div class="card small z-depth-5">
-			        <div class="img-card">
-			          <img src="image/classifier.png">
-			        </div>
-			        <div class="card-content">
-			        </div>
-			        <div class="card-action">
-			          <center>
-			          		<a href="https://ckshitij.github.io/Email-Classifier/" target="_blank">Read About Email Classifier</a>
-			          </center>
-			        </div>
-			      </div>
-			   </div>
-
-			   <div class="col s4 push-s3">
-			      <div class="card small z-depth-5">
-			        <div >
-			          <center>
-			         		<img class="img-card" src="image/re.jpg">
-			         	</center>
-			        </div>
-			        <div class="card-content">
-			        </div>
-			        <div class="card-action">
-			          <center>
-			          		<a href="https://ckshitij.github.io/RE_TO_DFA/" target="_blank">Read About RE to DFA Conversion</a>
-			          </center>
-			        </div>
-			      </div>
-			    </div>
-
-			<div class="row"></div>
-		    <div class="row"></div>
-		    <div class="row"></div> 
-        </div>
-    </section>
-    <br>
-    <br>
-		<br>
-		
-		<section>
-    	<div id="NormalBlog" >
-	        <div class="grey lighten-3">
-	            <div class="row">
-	            	<div>
-	            		<br><br><br>
-	            		<center>
-	            			<h3><b>NORMAL BLOGS</b></h3>
-	            		</center>
-	            	</div>
-
-	            	<div class="col s3">
-	            		<div class="card medium z-depth-5">
-						    <div class="card-image waves-effect waves-block waves-light">
-						      <img class="activator" src="image/my_eng.jpg">
-						    </div>
-						    <div class="card-content">
-						      <span class="card-title activator grey-text text-darken-4">My Engineering Life<i class="material-icons right">more_vert</i></span>
-						    </div>
-						    <div class="card-reveal">
-						      <span class="card-title grey-text text-darken-4">My Engineering Life<i class="material-icons right">close</i></span>
-						      <p>Being an Engineering student is a very difficult task but at the same time, it’s very interesting.<br> Now I am in the Third year and it seems like a day before I joined the college.<br>
-
-										In these three years, I have learned so much about myself.<br>
-										
-										When I joined AIT  (ARMY INSTITUTE OF TECHNOLOGY ) I didn’t have any motive, I just wanted to complete my engineering and getting a job in some company with some good package.<br> But After some time  I realized Engineering is not just about reading books, scoring marks and get the job, rather it is a platform or a path to create something, to give something valuable to the world then Only you will become a true Engineer.<br>
-										
-										Most of the Engineering student think the same as I was, which is neither right nor wrong.<br> It depends on the person because everyone has their own definition of “life” as well as of “being an engineer”, but again its a matter of time and as time passes, the definition changes and this is what I have realized over time.<br></p>
-						    </div>
-						</div>
-	            	</div>
-
-				    
-
-				    <div class="col s3 push-s1">
-	            		<div class="card medium z-depth-5">
-						    <div class="card-image waves-effect waves-block waves-light">
-						      <img class="activator" src="image/kuchAKS.jpg">
-						    </div>
-						    <div class="card-content">
-						      <span class="card-title activator grey-text text-darken-4">KUCH ANKAHE SABD<i class="material-icons right">more_vert</i></span>
-						    </div>
-						    <div class="card-reveal">
-						      <span class="card-title grey-text text-darken-4">KUCH ANKAHE SABD<i class="material-icons right">close</i></span>
-						      <p>Kaise batau kuch samjh mai aata nahi ,<br>
-
-										Tumhara vo khilkhilata Chara Nazar se jata nahi,<br>
-										
-										Ye kya ho gaya hai mujhko Samjh mai aata nahi,<br>
-										
-										Zindgi badal si gai hai inn kuch lamho mai ,<br>
-										
-										Sochta hu,<br>
-										
-										kya ye sahi hai ,<br>
-										
-										kya ye sahi hai.....<br>
-										
-										Phir ek pal sochta hu bhul jau tumhe ,<br>
-										
-										Pr phir jab tumhe dekhta hu ,<br>
-										
-										Khud se Puchta hu,<br>
-										
-										kya ye sahi hai ,<br>
-										
-										kya ye sahi hai.....</p><br>
-						    </div>
-						</div>
-	            	</div>
-
-	            	<div class="col s4 push-s2">
-	            		<div class="card medium z-depth-5">
-						    <div class="card-image waves-effect waves-block waves-light">
-						      <img class="activator" src="image/DArr.jpg">
-						    </div>
-						    <div class="card-content">
-						      <span class="card-title activator grey-text text-darken-4">Kuch pa lehenga<i class="material-icons right">more_vert</i></span>
-						    </div>
-						    <div class="card-reveal">
-						      <span class="card-title grey-text text-darken-4">Kuch pa lehenga<i class="material-icons right">close</i></span>
-						      <p><div>Aaj uss khule aasmaan ki taraf mai baahe khole chal raha tha</div>
-										<div>ek alag darr ka yehsaas mera mann mai pal raha tha</div>
-										<div></div>
-										 
-										<div>ye manjil aur mehfil in banzaroo ka sama</div>
-										<div>eka ek anokha  afsana sa bana</div>
-										<div></div>
-										 
-										<div>jab paya khud ko bebas aur lachar</div>
-										<div>to dil se aai ek pookar ki ladke abhi na haar</div>
-										<div></div>
-										 
-										<div>Abhi bhi uss assaman ki taraf baahe fhalaey chal raha hu</div>
-										<div>dheere dheera vo darr ka yehsaas kam kar raha hu</div>
-										<div></div>
-										 
-										<div>Vo din dur nahi jab assaman ko bhi pa lunga</div>
-										<div>apne uss darr ke yehsaas ko bhi kudh mai sama lunga</div>
-										<div></div></p>
-						    </div>
-						</div>
-	            	</div>
-
-	        <div class="row"></div>
-		    <div class="row"></div>
-		    <div class="row"></div> 
-
-	    </div>
-		</section>
-		<!-- Intro end-->
-    <br>
-    <br>
-    <br>
-
-    <section>
-    	<div id="Project" >
-	        <div class="grey lighten-3">
-	            <div class="row">
-	            	<div>
-	            		<br><br><br>
-	            		<center>
-	            			<h3><b>PROJECTS</b></h3>
-	            		</center>
-	            	</div>
-
-	            	<div class="col s3">
-	            		<div class="card medium z-depth-5">
-						    <div class="card-image waves-effect waves-block waves-light">
-						      <img class="activator" src="image/comment.png">
-						    </div>
-						    <div class="card-content">
-						      <span class="card-title activator grey-text text-darken-4">Comment Toxicity Analysis<i class="material-icons right">more_vert</i></span>
-						      <p><a href="https://github.com/ckshitij/Comment-Toxicity-Analysis" target="_blank">Click here to see</a></p>
-						    </div>
-						    <div class="card-reveal">
-						      <span class="card-title grey-text text-darken-4">Comment Toxicity Analysis<i class="material-icons right">close</i></span>
-						      <p>Online Comment Toxicity Analysis using averaging the Classifiers and used both char level as well as word level n-grams.</p>
-						    </div>
-						</div>
-	            	</div>
-
-				    
-
-				    <div class="col s4 push-s1">
-	            		<div class="card medium z-depth-5">
-						    <div class="card-image waves-effect waves-block waves-light">
-						      <img class="activator" src="image/url.jpg">
-						    </div>
-						    <div class="card-content">
-						      <span class="card-title activator grey-text text-darken-4">URL Shortner<i class="material-icons right">more_vert</i></span>
-						      <p><a href="https://github.com/ckshitij/urlshort">Click here to see the project</a></p>
-						    </div>
-						    <div class="card-reveal">
-						      <span class="card-title grey-text text-darken-4">URL Shortner<i class="material-icons right">close</i></span>
-						      <p>It Shortened the large Url and generate the short url which is store in database(MongoDb) by using base encoding/decoding as our bijective function, specifically base58.</p>
-						    </div>
-						</div>
-	            	</div>
-
-	            	<div class="col s3 push-s2">
-	            		<div class="card medium z-depth-5">
-						    <div class="card-image waves-effect waves-block waves-light">
-						      <img class="activator" src="image/python.png">
-						    </div>
-						    <div class="card-content">
-						      <span class="card-title activator grey-text text-darken-4">Python Scripts<i class="material-icons right">more_vert</i></span>
-						      <p><a href="https://github.com/ckshitij/tweetspeak" target="_blank">Click Here for TweetSpeak</a><br><a href="https://github.com/ckshitij/UNHIDEFILE_IN_MAC" target="_blank">Click Here for Mac Folder Hide</a></p>
-						    </div>
-						    <div class="card-reveal">
-						      <span class="card-title grey-text text-darken-4">Python Scripts<i class="material-icons right">close</i></span>
-						      <p>There are two python Scripts first one is Tweetspeek and another folder hide in MAC OSX.</p>
-						    </div>
-						</div>
-	            	</div>
-
-	        <div class="row"></div>
-		    <div class="row"></div>
-		    <div class="row"></div> 
-
-	    </div>
-    </section>
-
-    
-    <!-- Intro end-->
-    <br>
-    <br>
-    <br>
-
-    <!-- About start-->
-    <section class="container brown lighten-5 " style="border-radius: 20px;" id="Contact">
-        <div >
-                <div class="w3-content w3-container w3-padding-64" id="Contact">
-			        <h3 class="w3-center">Army Institute Of Technology</h3>
-			        <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-			        <div class="w3-row w3-padding-32 w3-section">
-			          <div class="w3-col m4 w3-container ">
-			            <!-- Add Google Maps -->
-			            <div id="googleMap" class="w3-round-large w3-greyscale z-depth-5" style="width:100%;height:400px;"></div>
-			          </div>
-			          <div class="w3-col m8 w3-panel">
-			            <div class="w3-large w3-margin-bottom">
-			              <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Pune, India<br>
-			              <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +91-XXXXXXX800<br>
-			              <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: kshitij.chaurasiya@gmail.com<br>
-			            </div>
-			            <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-			            <form action="#Contact" target="_blank">
-			              <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-			                <div class="w3-half">
-			                  <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-			                </div>
-			                <div class="w3-half">
-			                  <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-			                </div>
-			              </div>
-			              <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-			              <button class="w3-button w3-black w3-right w3-section" type="submit">
-			                <i class="fa fa-paper-plane"></i> SEND MESSAGE
-			              </button>
-			            </form>
-			          </div>
-			        </div>
-			    </div>
-        </div>
-    </section>
-    <!-- About end-->
-    <br><br><br>
-    
-    <footer  class="page-footer grey darken-1 " style="background-image: url('./image/h1.png');">
-          
-          <div class="footer-copyright page-footer grey darken-1 " style="background-image: url('./image/h1.png');">
+    <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);" data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
+        <nav id="primary-navigation" class="site-navigation">
             <div class="container">
-            	<div class="row padfooter">
-            		<div class="col s7 ">
-            			© By Kshitij Chaurasiya <br>
-            			© Click on icons for Connect
-            		</div>
-	            	<div class="col s1">
-	            		<a href="https://www.facebook.com/ckshitij" target="_blank" class="btn-floating blue darken-3 z-depth-5"><i class="fa fa-facebook"></i></a>
-	            	</div>
-	            	<div class="col s1">
-	            		<a href="https://twitter.com/kcoddict" target="_blank" class="btn-floating blue z-depth-5"><i class="fa fa-twitter"></i></a>
-	            	</div>
-	            	<div class="col s1">
-	            		<a href="https://github.com/ckshitij" target="_blank" class="btn-floating black z-depth-5"><i class="fa fa-github"></i></a>
-	            	</div>
-	            	<div class="col s1">
-	            		<a href="https://www.linkedin.com/in/ckshitij/" target="_blank" class="btn-floating light-blue darken-3 z-depth-5"><i class="fa fa-linkedin"></i></a>
-	            	</div>
-	            	<div class="col s1">
-	            		<a href="https://www.hackerrank.com/coddict" target="_blank" class="btn-floating green darken-1 z-depth-5 tooltipped " data-tooltip="HackerRank"><i class="fa fa-hashtag"></i></a>
-	            	</div>
-            	</div>
+                <div class="navbar-header page-scroll">
+
+                    <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse" aria-expanded="false" >
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a href="#hero" class="site-logo"><img src="assets/img/logo_1.png" alt="logo"></a>
+
+                </div><!-- /.navbar-header -->
+
+                <div class="main-menu" id="portfolio-perfect-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="page-scroll"><a href="#about">About</a></li>
+                        <li class="page-scroll"><a href="#projects">Projects</a></li>
+                        <li class="page-scroll"><a href="#service">Poems</a></li>
+                        <li class="page-scroll"><a href="#portfolio">Blogs</a></li>
+                        <li class="page-scroll"><a href="#contact">Contact</a></li>
+                        
+                    </ul><!-- /.navbar-nav -->
+
+                </div><!-- /.navbar-collapse -->
+
             </div>
+        </nav><!-- /.primary-navigation -->
+    </header><!-- /#header -->
+
+    <div id="hero" class="hero">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <h1>Kshitij Chaurasiya</h1>
+                    <div class="page-scroll">
+                        <p class="job-title">Software Engineer</p>
+                        <a href="#contact" class="btn btn-fill ">Message Me</a>
+                        <div class="clearfix visible-xxs"></div>
+                        <a href="#portfolio" class="btn btn-border">Explore more</a>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 text-right">
+                    <img src="assets/img/kshitij_img_1.png" alt="kshitij_chaurasiya">
+                </div>
+
+            </div>
+        </div>
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section id="about" class="site-section section-about text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <h2>About</h2>
+                        <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                        <p>Hello! I'm Kshitij, a Software Engineer, a technology enthusiast, and like to explore different domains of computer science. I have worked on virtualization technologies, web technologies, machine learning and natular language processing, also explored little bit of bio-informatics.  </p>
+                        <a href="https://github.com/ckshitij/ckshitij.github.io/blob/master/resume/Kshitij_Resume.pdf" class="btn btn-fill" target="_blank" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.secton-about -->
+
+        <section class="site-section section-skills">
+            <div class="container">
+                <div class="text-center">
+                    <h3>Work Skills</h3>
+                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="skill">
+                            <h4>C/C++, Object oriented programming & Designing</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="90"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                        <div class="skill">
+                            <h4>Code Automation (Python, Perl)</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="85"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                        <div class="skill">
+                            <h4>JAVA & SPRING BOOT FRAMEWORK (JPA)</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="80"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill">
+                            <h4>Virtualization & Cloud technologies</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="70"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                        <div class="skill">
+                            <h4>Software Development & Agile Planning</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="85"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                        <div class="skill">
+                            <h4>RESTful APIs & Algorithm implementation</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="85"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill">
+                            <h4>Security(HTTPS) & Storage Domain</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="78"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                        <div class="skill">
+                            <h4>Web-Framework (Node.js, Angular.js, Flask)</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="65"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                        <div class="skill">
+                            <h4>Operating System(Linux, OSX, Windows)</h4>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="90"></div><!-- /.progress-bar -->
+                            </div><!-- /.progress -->
+                        </div><!-- /.skill -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.secton-skills -->
+
+        <section id="service" class="site-section section-services overlay text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>FEW LINES</h3>
+                        <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="service">
+                            <img src="assets/img/front-end.svg" alt="Front End Developer">
+                            <h4>Kuch Ankahe Sabd</h4>
+                            <p>Kaise batau kuch samajh mae aata nahi, <br>
+							Tumhara vo khilkhilata chahra nazar se jata nahi, <br>
+							Yae kya ho gaya hai mujhko Samajh mae aata nahi, <br>
+							Zindgi badal si gai hai inn kuch lamho mae, <br>
+							Sochta hoo, <br>
+							kya yeh sahi hai , <br>
+							kya yeh sahi hai..... <br>
+							Phir ek pal sochta hoo bhul jau tumhe, <br>
+							Parr phir jab tumhe dekhta hu, <br>
+							Khud se Puchta hu, <br>
+							kya ye sahi hai, <br>
+							kya ye sahi hai..... <br>
+							</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="service">
+                            <img src="assets/img/back-end.svg" alt="Back End Developer">
+                            <h4>Khula Aasmaan</h4>
+                            <p> Aaj uss khule aasmaan ki taraf mae baahe khole chal raha tha <br>
+								ek alag darr ka yehsaas mera mann mae pal raha tha, <br>
+								 
+								yae manjil aur mehfil in banzaroo ka sama <br>
+								eka ek anokha  afsana sa bana, <br>
+								 
+								jab paya khud ko bebas aur laachar <br>
+								tabb dil se aai ek pookar ki ladke abhi na haar, <br>
+								 
+								Abhi bhi uss assaman ki taraf baahe fhalaey chal raha hu <br>
+								dheere dheera vo darr ka yehsaas ko kamm kar raha hu. <br>
+								 
+								Vo din dur nahi jab mae aasmaan ko bhi pa lunga <br>
+								apne uss darr ke yehsaas ko kudh mai sama lunga.... <br>
+							</p>
+                        </div><!-- /.service -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.secton-services -->
+
+        <section id="projects" class="site-section section-portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h3>Personal Projects</h3>
+                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio-1.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>Comment Toxicity Analysis</h4>
+                                <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="https://github.com/ckshitij/Comment-Toxicity-Analysis" target="_blank" ><span class="glyphicon glyphicon-link"></span></a>
+                            </div><!-- /.portfolio-item-info -->
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio-2.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>URL Shortner</h4>
+                                <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="https://github.com/ckshitij/urlshort" target="_blank" ><span class="glyphicon glyphicon-link"></span></a>
+                            </div><!-- /.portfolio-item-info -->
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/portfolio-3.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>Chat-App using Socket.io</h4>
+                                <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                            </div><!-- /.portfolio-item-info -->
+                        </div><!-- /.portfolio-item -->
+                </div>
+            </div>
+        </section><!-- /.secton-portfolio -->
+
+        <section id="portfolio" class="site-section section-services">
+            <div class="container">
+                <div class="text-center">
+                    <h3>Technical Blogs</h3>
+                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/classifier.png" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>Email Classifier</h4>
+                                <a href="https://ckshitij.github.io/Email-Classifier/" target="_blank" ><span class="glyphicon glyphicon-link"></span></a>
+                            </div><!-- /.portfolio-item-info -->
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/lexyacc.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>Lex & Yacc</h4>
+                                <a href="https://ckshitij.github.io/LEX-AND-YACC/" target="_blank" ><span class="glyphicon glyphicon-link"></span></a>
+                            </div><!-- /.portfolio-item-info -->
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="assets/img/re.jpg" class="img-res" alt="">
+                            <div class="portfolio-item-info">
+                                <h4>RE to DFA</h4>
+                                <a href="https://ckshitij.github.io/RE_TO_DFA/" target="_blank" ><span class="glyphicon glyphicon-link"></span></a>
+                            </div><!-- /.portfolio-item-info -->
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.secton-portfolio -->
+
+        <section class="site-section section-counters text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-4 col-xs-12">
+                        <p class="counter start" data-to="2" data-speed="2000">0</p>
+                        <h4>Years Experience</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-xs-12">
+                        <p id="infinity" class="counter" data-from="0" data-to="1" data-speed="1000">0</p>
+                        <h4>Seconds on this site!<br>What are you waiting for?</h4>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-counters -->
+
+        <section id="contact" class="site-section section-form text-center">
+            <div class="container">
+
+                <h3>Contact</h3>
+                <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                <form method="post" action="https://forms.un-static.com/forms/8ef9b40cb372f3e5e919aa73bf4a1c6f175deca9" >
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" name="name" class="form-control mt-x-0" placeholder="Name" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>   
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea name="message" id="mesaage" class="form-control" placeholder="Message" required></textarea>
+                        </div>
+                    </div>
+                    <button href="#" class="btn btn-border" type="submit">Send Me <span class="glyphicon glyphicon-send"></span></button>
+                </form>
+            </div>
+        </section><!-- /.section-form -->
+
+    </main><!-- /#main -->
+
+    <!-- Modals -->
+    <div id="portfolioItem1" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            <img class="img-res" src="assets/img/portfolio-1.jpg" alt="">
           </div>
-      </footer>
-   
+          <div class="modal-body">
+            <h4 class="modal-title">Comment Toxicity Analysis</h4>
+            <p>Online Comment Toxicity Analysis using averaging the Classifiers and used both char level as well as word level n-grams.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/ckshitij/Comment-Toxicity-Analysis" target="_blank" class="btn btn-fill">Visit Page</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
+    <div id="portfolioItem2" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            <img class="img-res" src="assets/img/portfolio-2.jpg" alt="">
+          </div>
+          <div class="modal-body">
+            <h4 class="modal-title">Project title</h4>
+            <p>It Shortened the large Url and generate the short url which is store in database(MongoDb) by using base encoding/decoding as our bijective function, specifically base58.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/ckshitij/urlshort"  target="_blank" class="btn btn-fill">Visit Page</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
+    <div id="portfolioItem3" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+            <img class="img-res" src="assets/img/portfolio-3.jpg" alt="">
+          </div>
+          <div class="modal-body">
+            <h4 class="modal-title">Chat-App using Socket.io</h4>
+            <p>Chat App using Socket.io realtime time fast messaging Web application using MEAN Stack. Still in progress. Coming soon....</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-fill">Visit Page</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-	<!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <a class="icon facebook-bg" href="https://www.facebook.com/ckshitij" target="_blank"><i class="icon-facebook"></i></a>
+                    <a class="icon twitter-bg" href="https://twitter.com/kcoddict" target="_blank"><i class="icon-twitter"></i></a>
+                    <a class="icon gplus-bg" href="#" target="_blank"><i class="icon-gplus"></i></a>
+                    <a class="icon linkedin-bg" href="https://www.linkedin.com/in/ckshitij/" target="_blank"><i class="icon-linkedin"></i></a>
+                </div>
+                <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3"><p class="copyright">© By Kshitij Chaurasiya </p></div>
+                <div class="col-sm-4 col-xs-3">
+                    <div class="text-right page-scroll">
+                        <a class="icon icon-up-bg" href="#hero"><i class="icon-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- /#footer -->
 
-    <!-- Add Google Maps -->
-      <script>
-          function myMap()
-          {
-            myCenter=new google.maps.LatLng(18.6069, 73.8752);
-            var mapOptions= {
-              center:myCenter,
-              zoom:12, scrollwheel: false, draggable: false,
-              mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-            var marker = new google.maps.Marker({
-              position: myCenter,
-            });
-            marker.setMap(map);
-          }
-      </script>        
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX2894rN3n0AobpwBByW7FlJzbon5LOuU&callback=myMap">
-      </script>
-
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+    <script src="assets/js/jquery.countTo.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  
 </body>
-<script type="text/javascript">
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.parallax');
-    var instances = M.Parallax.init(elems, options);
-  });
-
-  $(document).ready(function(){
-    $('.parallax').parallax();
-  });
-
-
-
-      
-</script>
-
 </html>
