@@ -1,2 +1,2 @@
 * [Home](/)
-* [Datastore](datastore.md)
+* [cache](cache.md)
