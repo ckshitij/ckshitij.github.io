@@ -1,2 +1,2 @@
 * [ckshitij](/)
-* [cache](cache.md)
+* [technical blogs](/blogs/)
