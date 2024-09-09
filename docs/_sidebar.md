@@ -1,0 +1,2 @@
+* [Home](/)
+* [Datastore](datastore.md)
