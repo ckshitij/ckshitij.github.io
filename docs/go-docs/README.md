@@ -2,5 +2,5 @@
 
 Documentation related to projects implemented in golang
 
-* [Cache Lib](/goblogs/cache.md)
-* [MultiThreaded File Search](/goblogs/multithred_search.md)
+* [Cache Lib](/go-docs/cache.md)
+* [MultiThreaded File Search](/go-docs/multithred_search.md)

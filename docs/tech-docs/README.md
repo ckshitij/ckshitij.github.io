@@ -7,3 +7,4 @@ Focus on Technical Content
 ## Documentation  
 
 - Lex and Yacc which used mostly in many parsers.
+    * [LEX and YACC](/tech-docs/lexandyacc.md)
