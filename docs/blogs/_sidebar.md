@@ -1,3 +1,3 @@
-* [technical blog](/blogs/)
-* [cache](/blogs/cache.md)
-* [lex and yacc](/blogs/lexandyacc.md)
+* [Cache Lib in Golang](/blogs/cache.md)
+* [MultiThreaded File Search in Golang](/blogs/multithred_search.md)
+* [LEX and YACC](/blogs/lexandyacc.md)

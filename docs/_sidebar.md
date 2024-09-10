@@ -1,2 +1,1 @@
-* [ckshitij](/)
-* [technical blogs](/blogs/)
+* [Projects Blog](/blogs/)
