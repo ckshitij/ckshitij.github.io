@@ -13,24 +13,24 @@ India | \+91 7875210800 | [kshitij.chaurasiya@gmail.com](http://kshitij.chaurasi
 
 **Programming Languages** : *Golang, C++, Typescript, Python, Rust*  
 **Software Development**  : *RESTful APIs, PostgreSQL, Github, Microservices, Data Structures/Algorithm*  
-**Web3 Technologies**     : *NEAR Protocol, Blockchain (EVM compatible), Metamask, Opensea, Web3auth*  
+**Web3 Technologies**     : *NEAR Protocol, Blockchain (EVM compatible) Wallets, Metamask, Opensea, Web3auth*  
 **Libraries/Frameworks**  : *Docker, Kubectl, RabbitMQ, Redis, NPM, GitHub Actions, MQTT, Swagger(OpenAPI)*  
-**Cloud Services**: *Azure (KeyVault, Service Bus, CosmosDb)*   
+**Cloud Services**: *Microsoft Azure (KeyVault, Service Bus, CosmosDb)*   
 **Domains**: *Storage, Blockchain, Ad-Tech, Machine-Learning (Supervised)*  
-**Other Skills**: *Agile, JIRA, Git, Docker, CI/CD, Linux*
+**Other Skills**: *Agile, JIRA, Git, CI/CD, Linux*
 
 ### **WORK EXPERIENCE**
 
-#### **Senior Software Engineer	03/2024 – Present**
-**Lemma Technologies, Pune, India**  
+#### Lemma Technologies, Pune, India
+**Senior Software Engineer** *(03/2024 – Present)*  
 *Ad Tech company which provides an Omnichannel Platform for Emerging Media*
 
 * Developed a proof-of-concept (POC) application utilizing **MQTT protocol** for remote management and control of Digital Out-Of-Home (DOOH) screens via mobile devices, **enabling dynamic content updates and real-time feedback from end users**. This solution enhances user engagement by allowing direct interaction with the display content through a mobile app interface.  
 * Developed a **Header-Bidding management service** from scratch in **Golang**, establishing a framework that optimizes ad inventory bidding across **multiple exchanges to enhance revenue** efficiency.  
 * Implemented **In-Memory Cache** with **AutoReload** functionality, which helps in **increasing QPS.**
 
-#### **Senior Software Engineer	12/2021 – 03/2024**
-**zblocks.io / zbyte.io (Open Foundation), Remote India**  
+#### zblocks.io / zbyte.io (Open Foundation), Remote India
+**Senior Software Engineer** *(12/2021 – 03/2024)*  
 *Blockchain-based startup launching a platform to connect Web2 users to Web3 domain*
 
 * **Engineered a 4-5 member team,** delivering an NFT-Campaign Platform from inception to deployment.
@@ -39,8 +39,8 @@ India | \+91 7875210800 | [kshitij.chaurasiya@gmail.com](http://kshitij.chaurasi
 * Developed a zblocks and zbyte.io Wallet that supports the **DPLAT ERC20 utility token** and also supports the **NFT transfer functionality for Polygon and Avalanche** Blockchain.
 * Pioneered **Token-Gated-Verifier, leveraging NFTs** for advanced user verification and promotion incentives. Established code standards and **CI/CD pipelines using GitHub Actions and ArgoCD**
 
-#### **Software Engineer	07/2018 – 12/2021**
-**Veritas Technologies, Pune, India**  
+#### Veritas Technologies, Pune, India
+**Software Engineer**	*(07/2018 – 12/2021)*   
 *Product: **Netbackup** used for Backup & Recovery*
 
 * Developed features including **Single File Store** for Virtualization workloads like **(VMware vCenter, ESXi and Nutanix AHV) and resolved Security Vulnerability**, enhancing user VM recovery and securing backup connections.

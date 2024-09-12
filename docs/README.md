@@ -23,17 +23,7 @@ This seamless combination of simplicity and style is made possible by **dosify**
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=ckshitij&label=Profile%20views&color=0e75b6&style=flat" alt="ckshitij" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ckshitij" alt="ckshitij" /></a> </p>
-
-### Skills
-
-**Programming Languages**: Golang, C++, Typescript, Python, Rust  
-**Software Development**: RESTful APIs, PostgreSQL, Github, Microservices, Data Structures/Algorithm  
-**Web3 Technologies**: NEAR Protocol, Blockchain (EVM compatible), Metamask, Opensea, Web3auth  
-**Libraries/Frameworks**: Docker, Kubectl, RabbitMQ, Redis, NPM, GitHub Actions, MQTT, Swagger (OpenAPI)  
-**Cloud Services**: Azure(KeyVault, Service Bus, CosmosDb)  
-**Domains**: Storage, Blockchain, Ad-Tech, Machine-Learning (Supervised)  
-**Other Skills**: Agile, JIRA, Git, Docker, CI/CD, Linux  
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ckshitij" alt="ckshitij" /></a> </p> 
 
 ### Languages and Tools
 
