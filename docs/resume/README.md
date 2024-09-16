@@ -25,8 +25,8 @@ India | \+91 7875210800 | [kshitij.chaurasiya@gmail.com](http://kshitij.chaurasi
 **Senior Software Engineer** *(03/2024 – Present)*  
 *Ad Tech company which provides an Omnichannel Platform for Emerging Media*
 
-* Developed a proof-of-concept (POC) application utilizing **MQTT protocol** for remote management and control of Digital Out-Of-Home (DOOH) screens via mobile devices, **enabling dynamic content updates and real-time feedback from end users**. This solution enhances user engagement by allowing direct interaction with the display content through a mobile app interface.  
-* Developed a **Header-Bidding management service** from scratch in **Golang**, establishing a framework that optimizes ad inventory bidding across **multiple exchanges to enhance revenue** efficiency.  
+* Developed a application by utilizing **MQTT protocol** for remote management and control of Digital Out-Of-Home (DOOH) screens via mobile devices, **enabling dynamic content updates and real-time feedback from end users**. This solution enhances user engagement by allowing direct interaction with the display content through a mobile app interface.  
+* Developed a **Header-Bidding management service** and write wrapper over **Prebid Server** from scratch in **Golang**, establishing a framework that optimizes ad inventory bidding across **multiple exchanges to enhance revenue** efficiency.  
 * Implemented **In-Memory Cache** with **AutoReload** functionality, which helps in **increasing QPS.**
 
 #### zblocks.io / zbyte.io (Open Foundation), Remote India
