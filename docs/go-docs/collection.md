@@ -1,5 +1,4 @@
-## [collections](https://github.com/ckshitij/collections)
-# Collections Library
+## [Collections](https://github.com/ckshitij/collections)
 
 The **Collections Library** is a robust set of data structures implemented in Go. It is designed to provide developers with efficient and reusable components for building complex applications.
 
