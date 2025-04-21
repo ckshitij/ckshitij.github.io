@@ -13,7 +13,6 @@ optimizing performance through CI/CD, in-memory caching, and distributed systems
 APIs, blockchain, and cloud platforms, with a strong focus on reliability, efficiency, and problem-solving.*
 
 ## 🛠 Technical Skills
-
 ### 👨‍💻 Programming Languages
 - Golang
 - C++
@@ -124,7 +123,6 @@ Contributor to a Rust library supporting **NEAR Protocol APIs**. Working on expa
 
 
 ## 🎓 Education
-
 **Bachelor of Engineering**  
 *Army Institute of Technology* | *Jul 2014 – May 2018*
 
