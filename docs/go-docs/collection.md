@@ -1,110 +1,126 @@
-## [Collections](https://github.com/ckshitij/collections)
+## [Collection](https://github.com/ckshitij/collection)
 
-The **Collections Library** is a robust set of data structures implemented in Go. It is designed to provide developers with efficient and reusable components for building complex applications.
+## Building a Generic & Concurrent-Safe Collection Library in Go using Generics
 
-## Modules
+Go is known for its simplicity and performance, but when it comes to data structures like priority queues, stacks, and lists, developers often rely on custom implementations. With the introduction of **generics in Go 1.18**, it has become easier and more type-safe to build reusable data structures.
 
-### 1. **Heap**
-   - **Description**: A generic heap implementation.
-   - **Features**:
-     - Min-Heap or Max-Heap functionality based on a customizable comparator.
-     - Operations: Push, Pop, Size.
-   - **Usage**:
-     ```go
-     heap := NewHeap(func(a, b int) bool { return a < b }) // Min-Heap
-     heap.Push(10)
-     heap.Push(5)
-     top := heap.Pop() // Returns 5
-     ```
+In this blog, I'll walk through the **collection package** I built, which includes:
 
-### 2. **List**
-   - **Description**: A doubly linked list implementation.
-   - **Features**:
-     - Operations: Push, Append, PopFront, PopBack, InsertAtPosition, IterateForward, IterateBackward.
-   - **Usage**:
-     ```go
-     list := NewList[int]()
-     list.Push(1)
-     list.Append(2)
-     front := list.Front().Element() // Returns 1
-     ```
-
-### 3. **Node**
-   - **Description**: Node abstraction for use in data structures like lists.
-   - **Features**:
-     - Encapsulates element data with next and previous pointers.
-
-### 4. **Queue**
-   - **Description**: A generic queue implementation.
-   - **Features**:
-     - FIFO (First In First Out) behavior.
-     - Operations: Enqueue, Dequeue, Peek.
-   - **Usage**:
-     ```go
-     queue := NewQueue[int]()
-     queue.Enqueue(1)
-     queue.Enqueue(2)
-     front := queue.Dequeue() // Returns 1
-     ```
-
-### 5. **Set**
-   - **Description**: A generic set implementation.
-   - **Features**:
-     - Operations: Add, Remove, Contains, Size.
-   - **Usage**:
-     ```go
-     set := NewSet[int]()
-     set.Add(1)
-     set.Add(2)
-     exists := set.Contains(1) // Returns true
-     ```
-
-### 6. **Stack**
-   - **Description**: A generic stack implementation.
-   - **Features**:
-     - LIFO (Last In First Out) behavior.
-     - Operations: Push, Pop, Top, IsEmpty.
-   - **Usage**:
-     ```go
-     stack := NewStack[int]()
-     stack.Push(10)
-     top := stack.Top() // Returns 10
-     ```
+- A **concurrent-safe doubly linked list**
+- A **generic priority queue** built on heap logic
+- A **queue** and **stack** abstraction
+- Support for **primitive types** with optimized helper functions
+- And yes — **thread-safety and performance** considerations
 
 ---
 
-## Contribution Guide
+### 1. 📋 Concurrent-Safe Doubly Linked List
 
-We welcome contributions to enhance the Go Collection Library. Please follow the steps below:
+We designed the `list` package with concurrency in mind. The list internally uses a `sync.RWMutex` to make operations like `PushFront`, `PushBack`, `PopFront`, `PopBack`, and traversal (`IterateForward`, `IterateBackward`) thread-safe.
 
-### 1. Fork the Repository
-   - Fork this repository to your GitHub account and clone it locally.
-
-### 2. Set Up the Environment
-   - Install [Go](https://golang.org/dl/) (ensure version >= 1.19).
-   - Run `go mod tidy` to install dependencies.
-
-### 3. Code Standards
-   - Adhere to the Go style guide and naming conventions.
-   - Use appropriate comments for exported functions.
-
-### 4. Testing
-   - Ensure all new code is covered by unit tests.
-   - Run tests using `go test ./... -cover` to verify functionality and maintain code coverage.
-
-### 5. Submit a Pull Request
-   - Push your changes to your fork and create a pull request to the main repository.
-   - Include a detailed description of your changes and the problem they solve.
+```go
+list := list.NewList[int]()
+list.PushBack(10)
+list.PushFront(5)
+fmt.Println(list.Len())  // Output: 2
+```
 
 ---
 
-## License
+## 2. 🚦 Priority Queue: Heap-Based & Generic
 
-This project is licensed under the terms of the [MIT License](LICENSE).
+The `priority_queue` package defines a **generic `PriorityQueue[T]`** that is heap-backed. A comparator function defines whether the queue behaves as a min-heap or max-heap.
 
-## Contact
+### Example:
 
-For any questions or suggestions, feel free to raise an issue or reach out.
+```go
+pq := pq.NewMinIntPQ(5, 1, 3, 4)
+for !pq.Empty() {
+    fmt.Println(pq.Pop()) // Output: 1 3 4 5
+}
+```
+
+To simplify usage with primitives, I created helper functions like:
+
+- `NewMinIntPQ`, `NewMaxIntPQ`
+- `NewMinFloat32PQ`, `NewMaxFloat32PQ`
+- `NewMinStringPQ`, `NewMaxStringPQ`
+
+This means you can get **typed priority queues without redefining comparator logic.**
+
+---
+
+## 3. 🎡 Queue: FIFO with Thread Safety
+
+The `queue` package provides a **generic and concurrent-safe queue**:
+
+```go
+q := queue.NewQueue[int]()
+q.Enqueue(1)
+q.Enqueue(2)
+value, _ := q.Dequeue()
+fmt.Println(value)  // Output: 1
+```
+
+It also includes **primitive helpers** like `NewIntQueue`, `NewStringQueue`, etc.
+
+---
+
+## 4. 🥞 Stack: LIFO with Generics
+
+Similarly, the `stack` package offers:
+
+```go
+st := stack.NewStack[string]()
+st.Push("hello")
+fmt.Println(st.Top()) // Output: hello
+```
+
+You can also reset the stack using `Clear`.
+
+---
+
+## 5. ✅ Thread Safety & Performance
+
+- Each data structure is guarded with appropriate **read-write mutexes** to support concurrent access.
+- Underlying data structures are **efficient and optimized** for their respective use-cases.
+- Extensive tests with **>90% coverage** ensure reliability.
+
+```bash
+go test ./... -race -cover
+```
+
+---
+
+## 6. 🛠️ Contribution Guide
+
+This project is open-source and available on [GitHub](https://github.com/ckshitij/collection). I'm welcoming contributions for:
+
+- More data structures
+- Performance improvements
+- Additional features like iterators
+
+If you'd like to contribute:
+
+1. Fork the repo
+2. Create a feature branch
+3. Submit a pull request with relevant tests
+
+---
+
+## 7. 📚 Closing Thoughts
+
+Go's generics unlocked a new level of reusability for data structures. Through this project, I've built reusable, type-safe, and concurrent-ready collections that can be a solid utility in your Go projects.
+
+You can explore the full source here:  
+👉 **[https://github.com/ckshitij/collection](https://github.com/ckshitij/collection)**
+
+---
+
+Feel free to try it out, give feedback, or contribute!
+
+> _Happy coding!_ 🚀
+
 
 
 
