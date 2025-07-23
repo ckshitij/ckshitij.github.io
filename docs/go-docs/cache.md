@@ -1,113 +1,169 @@
-## [Cache](https://github.com/ckshitij/cache)
+## 🌟 [Building a Type-Safe Generic In-Memory Datastore in Go](https://github.com/ckshitij/memstore)
 
-Cache library in go-lang which can be used to store the key-value pair in memory and also provide the auto cleanup functionality using time-to-live duration.
+Golang 1.18+ brings powerful generics support, allowing developers to write cleaner, reusable, and type-safe code. In this post, we'll explore a practical use case—**a generic in-memory datastore with built-in TTL (Time-To-Live)**, sweeping for stale data, and concurrency safety using mutexes.
 
-### Types
+We'll also cover potential pitfalls (like silent goroutine panics), address common usage patterns, and walk through real-world examples.
 
-Currently there are two type of cache are supported:
- - Datastore
-   - Common in-memory datastore pretty much like to store key-values, with get and set functionality and provide the clean-up based on time-to-live parameters.
- - AutoReload
-   - This cache is mostly used for read-heavy functionality in one go, there is not a set method since it mainly load all the data on startup then auto reload the data after given interval.
-   - e.g, mostly this could be used if user need to load all the data at once from db to memory.
+---
 
-### Installation
+## 🚀 What We'll Build
 
-- Use the below command to install the library
-    ```sh
-    go get github.com/ckshitij/cache
-    ```
+We’re going to implement a **thread-safe, generic in-memory datastore** with:
 
-### Examples
+- ✅ Type-safe key-value storage using generics  
+- 🕓 TTL support for each value  
+- 🧹 Auto-sweeping of expired values  
+- 🔐 Concurrency-safe access using sync.RWMutex  
+- 🔄 Graceful goroutine error handling  
 
-#### Datastore Test cases
+---
+
+## 📦 Basic Building Block: `CacheItem`
+
+Each stored value is wrapped with metadata:
 
 ```go
-func TestAutoSweep(t *testing.T) {
-  sweepInterval := 500 * time.Millisecond
-  ds, err := NewDatastore[string](context.Background(), 1*time.Second, cache.WithSweeping(sweepInterval))
-  if err != nil {
-    t.Fatalf("init failed")
-  }
-  key, value := "tempKey", "tempValue"
-  ds.Put(key, value)
-
-  // Wait for TTL to expire and cleanup to run
-  time.Sleep(2 * time.Second)
-
-  // Verify that the key has been cleaned up
-  _, ok := ds.Get(key)
-  if ok {
-    t.Errorf("expected key to be cleaned up, but it still exists")
-  }
+type CacheItem[T any] struct {
+    Value     T
+    CreatedAt time.Time
+    TTL       time.Duration
 }
+```
 
-func TestConcurrentAccess(t *testing.T) {
-  ds, err := NewDatastore[string](context.Background(), 5*time.Second)
-  if err != nil {
-    t.Fail()
-  }
+We also define a constructor to allow default TTL fallback:
 
-  // Run concurrent writes using integer range
-  for i := range make([]struct{}, 100) {
-    go ds.Put(fmt.Sprintf("key%d", i), fmt.Sprintf("value%d", i))
-  }
-
-  // Run concurrent reads using integer range
-  for i := range make([]struct{}, 100) {
-    go func(i int) {
-      ds.Get(fmt.Sprintf("key%d", i))
-    }(i)
-  }
-
-  // Ensure all values are accessible
-  time.Sleep(1 * time.Second)
-  for i := range make([]struct{}, 100) {
-    val, ok := ds.Get(fmt.Sprintf("key%d", i))
-    if !ok || val.Value != fmt.Sprintf("value%d", i) {
-      t.Errorf("expected value %v, got %v", fmt.Sprintf("value%d", i), val)
+```go
+func NewCacheItem[T any](value T, ttl time.Duration) CacheItem[T] {
+    if ttl <= 0 {
+        ttl = 24 * time.Hour // default TTL
     }
-  }
+    return CacheItem[T]{
+        Value:     value,
+        CreatedAt: time.Now().UTC(),
+        TTL:       ttl,
+    }
 }
 ```
 
-#### AutoReload Test cases
+---
+
+## 🗃️ The `Datastore` Structure
+
+Our generic datastore is defined as:
 
 ```go
-// Mock DataFunc that returns some mock data for testing
-func mockLoadFuncSuccess() (map[string]cache.CacheElement[string], error) {
-	data := map[string]cache.CacheElement[string]{
-		"key1": {Value: "value1"},
-		"key2": {Value: "value2"},
-	}
-	return data, nil
+type Datastore[K MapKey, T any] struct {
+    elements map[K]CacheItem[T]
+    ttl      time.Duration
+    mutex    sync.RWMutex
+    opts     Options
 }
-
-func TestNewAutoReload_Success(t *testing.T) {
-	ctx, cancel := context.WithCancel(context.Background())
-	defer cancel()
-
-	// Test cache creation with a successful load function
-	autoCache, err := NewAutoReload[string](ctx, "testCache", mockLoadFuncSuccess)
-	require.NoError(t, err, "Error should be nil on creating cache")
-	assert.NotNil(t, autoCache, "Cache should not be nil after initialization")
-
-	// Test that data is loaded into cache immediately
-	data, ok := autoCache.Get("key1")
-	assert.True(t, ok, "Cache key 'key1' should exist")
-	assert.Equal(t, "value1", data.Value, "Cache value for 'key1' should be 'value1'")
-
-	// Test Get for non-existent key
-	_, ok = autoCache.Get("invalidKey")
-	assert.False(t, ok, "Cache should return false for non-existent keys")
-
-	// Test refresh duration
-	assert.Equal(t, time.Second*10, autoCache.GetRefreshDuration(), "Refresh duration should be 1 minute")
-
-	// Test that the initial data is available in cache
-	data, ok = autoCache.Get("key2")
-	assert.True(t, ok, "Cache key 'key2' should exist")
-	assert.Equal(t, "value2", data.Value, "Cache value for 'key2' should be 'value2'")
-}
-
 ```
+
+Where `K` is a `comparable` type (as required by Go maps), and `T` is the value type.
+
+---
+
+## 🛠️ Creating a New Datastore
+
+```go
+ds, err := NewDatastore[string, int](ctx, 10*time.Second)
+```
+
+Optional sweep interval and configurations are passed as functional options.
+
+### Example Use Cases:
+```go
+ctx := context.Background()
+
+// A datastore storing integer counters with 30-second TTL
+intStore, _ := NewDatastore[string, int](ctx, 30*time.Second)
+
+// Store value
+intStore.Put("user:123", 42)
+
+// Get value
+val, ok := intStore.Get("user:123")
+if ok {
+    fmt.Println("Found:", val.Value)
+}
+```
+
+---
+
+## ⚙️ Expiry and Sweeping
+
+The `isExpired()` method checks if an item is stale:
+
+```go
+func (ds *Datastore[K, T]) isExpired(item CacheItem[T]) bool {
+    return time.Since(item.CreatedAt) > item.TTL
+}
+```
+
+### 🧹 Sweep Routine
+
+We run a goroutine that periodically removes expired values:
+
+```go
+func (ds *Datastore[K, T]) sweep(ctx context.Context, interval time.Duration) {
+    ticker := time.NewTicker(interval)
+    defer ticker.Stop()
+
+    for {
+        select {
+        case <-ticker.C:
+            ds.mutex.Lock()
+            for key, val := range ds.elements {
+                if ds.isExpired(val) {
+                    delete(ds.elements, key)
+                }
+            }
+            ds.mutex.Unlock()
+        case <-ctx.Done():
+            fmt.Println("sweep closed")
+            return
+        }
+    }
+}
+```
+
+---
+
+## 🧪 Testing with Custom Structs
+
+The datastore works seamlessly with structs too:
+
+```go
+type Session struct {
+    UserID    string
+    AuthToken string
+}
+
+sessionStore, _ := NewDatastore[string, Session](ctx, 15*time.Minute)
+sessionStore.Put("sess:001", Session{"u123", "token_xyz"})
+```
+
+---
+
+## 🛡️ Final Thoughts and Improvements
+
+✅ This generic datastore is already highly usable. However, you can enhance it by:
+- Logging expired deletions
+- Adding max-size or eviction policies
+- Persisting values to disk
+- Supporting batch operations
+
+---
+
+## 📚 Summary
+
+With the power of Go generics and the concurrency-safe patterns, we’ve built a fast, type-safe, flexible in-memory cache that’s useful in many production services like:
+
+- Session stores  
+- API rate limiting  
+- Local in-process caching  
+- Short-lived auth tokens  
+
+Happy Go-ing! 🎯
+
