@@ -1,15 +1,25 @@
-# Kshitij Chaurasiya
+<h1 align="center" style="margin-bottom: 0;">KSHITIJ CHAURASIYA</h1>
+<h3 align="center" style="margin-top: 0; font-weight: normal;">Senior Software Engineer</h3>
 
-### 📇 Contact
+<p align="center" style="font-size: 16px;">
+  📍 Pune, India &nbsp;&nbsp;|&nbsp;&nbsp;
+  📧 <a href="mailto:kshitij.chaurasiya@gmail.com">kshitij.chaurasiya@gmail.com</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+  📞 <a href="tel:+917875210800">+91 7875210800</a>
+</p>
 
-**📍 Location:** Pune, India  
-**📧 Email:** [kshitij.chaurasiya@gmail.com](mailto:kshitij.chaurasiya@gmail.com)  
-**📞 Phone:** [+91 7875210800](tel:+917875210800)
-
-#### Links
-* [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ckshitij)
-* [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ckshitij)
-* [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=google-chrome&logoColor=white)](https://ckshitij.github.io/portfolio/#/)
+<p align="center">
+  <a href="https://github.com/ckshitij" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/ckshitij" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="https://ckshitij.github.io/portfolio/#/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>
+</p>
 
 
 ## 👨‍💻 Personal Summary
