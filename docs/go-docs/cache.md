@@ -1,4 +1,4 @@
-## 🌟 [In-Memory Datastore in Go](https://github.com/ckshitij/memstore)
+## 🌟 [Memory Datastore in Go](https://github.com/ckshitij/memstore)
 
 Golang 1.18+ brings powerful generics support, allowing developers to write cleaner, reusable, and type-safe code. In this post, we'll explore a practical use case—**a generic in-memory datastore with built-in TTL (Time-To-Live)**, sweeping for stale data, and concurrency safety using mutexes.
 
